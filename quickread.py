@@ -33,8 +33,7 @@ def error_proof_opener(f,adress):
             content = f(adress)
         except PermissionError:
             message = "Please, close the app that's using the file"
-            time.sleep(0.2)
-            loop = 0
+            time.sleep(0.2+loop)
         except FileNotFoundError:
             message = "Trying automatic correction of a temporary file"
             adress = adress.replace("~$","")
